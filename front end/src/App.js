@@ -1,10 +1,9 @@
 import SignUp from "./component/signup/SignUp";
 
-
 function App() {
   return (
     <>
-    <SignUp />
+      <SignUp />
     </>
   );
 }
