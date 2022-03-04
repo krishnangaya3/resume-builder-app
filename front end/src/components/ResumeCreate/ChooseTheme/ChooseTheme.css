@@ -1,0 +1,138 @@
+.chooseTheme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* extra */
+    color: #03263a;
+}
+
+.chooseTheme > h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.themeFormContainer {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.themeForm {
+    display: flex;
+    width: 90%;
+}
+
+.themeForm h3{
+    font-size: 25px;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.choosePrimaryTheme, .chooseSecondaryTheme {
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem;
+    margin-right: 5%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.choosePrimaryTheme{
+    margin-left: 5%;
+}
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .themeForm {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .chooseTheme > h1 {
+        margin-bottom: -3%;
+    }
+    .choosePrimaryTheme, .chooseSecondaryTheme {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    .themeForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .chooseTheme > h1 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: -1rem;
+        text-align: center;
+    }
+    .choosePrimaryTheme, .chooseSecondaryTheme {
+        width: 80%;
+        margin-left: 5%;
+        text-align: center;
+        transform: scale(0.95);
+        margin-top: 0%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chooseTheme > h1 {
+        font-size: 2.3rem;
+        margin-bottom: -10%;
+    }
+    .choosePrimaryTheme, .chooseSecondaryTheme {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .choosePrimaryTheme, .chooseSecondaryTheme {
+        width: 90%;
+        transform: scale(0.8);
+    }
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
+}
