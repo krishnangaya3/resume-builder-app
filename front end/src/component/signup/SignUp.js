@@ -23,13 +23,13 @@ const SignUp = () => {
   const buttonStyle = { margin: "20px auto", backgroundColor: "green" };
   const textStyle = { margin: "20px auto" };
   const initialValues = {
-    name: "",
+    username: "",
     email: "",
     password: "",
   };
 
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Required"),
+    username: Yup.string().required("Required"),
     email: Yup.string().email("Please enter valid email").required("Required"),
     password: Yup.string().required("Required"),
   });
@@ -85,13 +85,13 @@ const SignUp = () => {
                 <Field
                   as={TextField}
                   label="Name"
-                  name="name"
+                  name="username"
                   fullWidth
                   placeholder="Enter your name"
                   style={textStyle}
-                  helperText={<ErrorMessage name="name" />}
+                  helperText={<ErrorMessage name="username" />}
                   required
-                  autocomplete="off"
+                  
                 />
                 <Field
                   as={TextField}
