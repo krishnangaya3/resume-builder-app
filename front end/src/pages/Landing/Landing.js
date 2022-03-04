@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import { Main, Features, Demo, Footer } from '../../components'
+import { Main, Features, Demo } from '../../components'
 
 
 function Landing() {
@@ -10,12 +10,12 @@ function Landing() {
     return (
         <div className="landing">
             <Helmet>
-                <title>Rzume - Build Your Resume</title>
+                <title>Build Your Resume</title>
             </Helmet>
             <Main />
             <Features />
             <Demo />
-            <Footer />
+        
         </div>
     )
 }

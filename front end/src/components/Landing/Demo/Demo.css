@@ -1,6 +1,6 @@
 .demo {
     height: 100vh;
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
