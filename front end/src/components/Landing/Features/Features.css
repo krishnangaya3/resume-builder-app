@@ -1,0 +1,137 @@
+.features {
+    height: 100vh;
+    background-color: #1b1919;
+    
+}
+
+.features-body{
+    padding-top: .5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+
+.features-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0.6;
+    height: fit-content;
+    height: 100%;
+
+}
+
+.features-text {
+    margin: 1rem;
+}
+
+.features-text > h2{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: 'Barlow', sans-serif; 
+    color: #fff;
+    line-height: 96%;
+}
+
+.features-text>p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #737373;
+    font-family: 'Barlow', sans-serif; 
+}
+.features-img{
+    margin-top: 40px;
+}
+
+
+
+.features-img>img{
+    width: 550px;
+    pointer-events: none;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .features{
+        height: fit-content;
+    }
+    .features-body{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+  }
+   .features-description{
+       margin: 2rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       align-items: flex-start;
+   }
+
+   .features-text {
+        margin: 1rem;
+        flex: 0.5;
+    }
+
+   .features-text > h2 {
+        white-space: nowrap;
+   }
+    
+}
+@media screen and (max-width: 992px){
+    .features{
+        height: fit-content;
+    }
+    .features-description{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .features-body{
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+  }
+  
+  .features-description{
+      margin: 1.25rem;
+  }
+
+  .features-description > h2{
+      font-size: 2.5rem;
+  }
+
+  .features-img{
+      margin-bottom: 2rem;
+  }
+
+  .features-img > img{
+      width: 400px;
+  }
+    
+}
+
+@media screen and (max-width: 800px){
+    .features-description{
+        display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      margin: 0.75rem;
+    }
+
+    .features-img > img{
+        width: 100%;
+    }
+      
+}

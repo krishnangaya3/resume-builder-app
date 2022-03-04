@@ -1,10 +1,45 @@
-import SignUp from "./component/signup/SignUp";
+import React, { useContext } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Landing, Template1, Template2, ResumeCreate, FourNotFour} from './pages'
+import { DetailsContext } from './contexts/DetailsContext'
+import { PDFViewer } from '@react-pdf/renderer';
+import './App.css';
 
 function App() {
+
+  const { resume } = useContext(DetailsContext);
+
+
+
   return (
-    <>
-      <SignUp />
-    </>
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Landing />
+          </Route>
+          <Route path="/template/1" exact>
+            <PDFViewer>
+              <Template1 resume={resume}/>
+            </PDFViewer>
+          </Route>
+
+          <Route path="/template/2" exact>
+            <PDFViewer>
+              <Template2 resume={resume}/>
+            </PDFViewer>
+          </Route>
+
+          <Route path="/create" exact>
+            <ResumeCreate />
+          </Route>
+
+
+          <Route component={FourNotFour} />
+
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
