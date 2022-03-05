@@ -11,7 +11,7 @@ import "./SignUp.css";
 
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Navbar } from '../../components'
+import { Navbar } from "../../components";
 
 // import { useNavigate } from "react-router-dom";
 
@@ -23,15 +23,13 @@ const SignUp = () => {
   const buttonStyle = { margin: "20px auto", backgroundColor: "green" };
   const textStyle = { margin: "20px auto" };
   const initialValues = {
-    name: "",
+    username: "",
     email: "",
     password: "",
   };
 
- 
-
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Required"),
+    username: Yup.string().required("Required"),
     email: Yup.string().email("Please enter valid email").required("Required"),
     password: Yup.string().required("Required"),
   });
@@ -48,7 +46,7 @@ const SignUp = () => {
     };
     console.log("called fetch");
     const response = await fetch(
-      "http://localhost:3000/create",
+      "http://localhost:5000/signup/adduser",
       requestOptions
     );
     const respData = await response.json();
@@ -68,12 +66,14 @@ const SignUp = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Grid>
         <Paper elevation={20} style={paperStyle}>
           <Grid align="center">
             <Avatar style={avatarStyle}></Avatar>
-            <h1 className="signupHeading" style={headerStyle}>Sign Up</h1>
+            <h1 className="signupHeading" style={headerStyle}>
+              Sign Up
+            </h1>
             <Typography variant="caption" gutterBottom>
               Please fill this form to create an account !
             </Typography>
@@ -88,11 +88,11 @@ const SignUp = () => {
                 <Field
                   as={TextField}
                   label="Name"
-                  name="name"
+                  name="username"
                   fullWidth
                   placeholder="Enter your name"
                   style={textStyle}
-                  helperText={<ErrorMessage name="name" />}
+                  helperText={<ErrorMessage name="username" />}
                   required
                   autocomplete="off"
                 />
