@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./SignIn.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Navbar } from '../../components'
+import { Navbar } from "../../components";
 const SignIn = (props) => {
   let navigate = useNavigate();
   let [login, SetLogin] = useState([]);
   const [formValues, setFormValues] = useState({ username: "", password: "" });
+  const [formErrorValues, setFormErrorValues] = useState(null);
 
   const handleChange = (event) => {
     console.log(event.target);
@@ -15,38 +16,33 @@ const SignIn = (props) => {
     console.log(formValues);
   };
 
-  useEffect(() => {
-    loginData();
-  }, []);
-
-  function loginData() {
-    axios.get("http://localhost:3005/api/login").then((response) => {
-      console.log("in logindata", response.data);
-      SetLogin((login = response.data));
-    });
-  }
   function authenticate() {
-    console.log("in authenticate");
-    let flag1 = 0;
-    let flag2 = 0;
-    let admin = 0;
-    login.map((x, key) =>
-      x.username === formValues.username && x.password === formValues.password
-        ? (flag1 = 1)
-        : (flag2 = 0)
+    fetchAPI();
+  }
+
+  async function fetchAPI() {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: formValues.username,
+        password: formValues.password,
+      }),
+    };
+    console.log("called fetch");
+    const response = await fetch(
+      "http://localhost:5000/login/verifyuser",
+      requestOptions
     );
-    login.map((x, key) =>
-      "Admin" === formValues.username && "12345" === formValues.password
-        ? (admin = 1)
-        : (flag2 = 0)
-    );
-    if (admin === 1) {
-      navigate("../", { replace: true });
-      props.setlogin(2);
-    } else if (flag1 === 1) {
-      navigate("../", { replace: true });
-      props.setlogin(1);
-    } else alert("Invalid Username or Password");
+    const respData = await response.json();
+    console.log("resp::", respData);
+    if (respData) {
+      console.log("goin to navigate::");
+      navigate("/");
+    } else {
+      alert("Invalid Username or Password");
+      setFormErrorValues("Invalid credentials!!");
+    }
   }
 
   const clicked = (event) => {
@@ -54,7 +50,7 @@ const SignIn = (props) => {
   };
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>
@@ -82,9 +78,10 @@ const SignIn = (props) => {
           value={formValues.password}
         />
 
-        <button  onClick={authenticate}>Log In</button>
+        <button onClick={authenticate}>Log In</button>
+        <p className="error">{formErrorValues}</p>
         <label>Not Registered?</label>
-        <button  onClick={clicked}>Sign Up Here!!!!</button>
+        <button onClick={clicked}>Sign Up Here!!!!</button>
       </form>
     </>
   );

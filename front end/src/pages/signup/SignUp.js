@@ -13,10 +13,10 @@ import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Navbar } from "../../components";
 
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  //   let navigate = useNavigate();
+  let navigate = useNavigate();
   const paperStyle = { padding: "50px 30px", width: 500, margin: "70px auto" };
   const headerStyle = { margin: 0 };
   const avatarStyle = { backgroundColor: "green" };
@@ -53,7 +53,7 @@ const SignUp = () => {
     console.log("resp::", respData);
     if (respData) {
       console.log("goin to navigate::");
-      //   navigate("");
+      navigate("/signin");
     }
   }
 
