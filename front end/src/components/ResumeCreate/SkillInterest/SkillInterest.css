@@ -18,7 +18,7 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: .4rem;
-    color: #A6D1E9;
+    color: #4a575e;
 }
 
 .skillForm, .interestForm {
@@ -47,7 +47,7 @@
     margin-bottom: 1.5rem;
     font-family: 'Barlow', sans-serif;
     font-size: 1.1rem;
-    color: rgb(15, 244, 252);
+    color: rgb(27, 27, 27);
     font-weight: 600;
     background: rgba(17, 133, 112, 0.3);
     border-radius: 7px;

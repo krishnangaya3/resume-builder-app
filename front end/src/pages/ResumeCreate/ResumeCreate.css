@@ -89,7 +89,7 @@
     -webkit-backdrop-filter: blur(4px);
     -moz-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    border: 2px solid #108fd934;
+    border: none;
 
     font-family: 'Barlow', sans-serif;
     border-radius: 15px;
@@ -179,12 +179,12 @@
 
 
 .generate_popup {
-    background-color: #1090D9 !important;
+    background-color: white !important;
     min-height: 300px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 10px solid #063A57;
+    border: none;
 }
 
 .popupDiv{
