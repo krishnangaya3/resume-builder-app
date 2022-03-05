@@ -27,16 +27,16 @@ export default function Header() {
             //     </nav>
 
             // </div> 
-        <nav class="navbar fixed-top  navbar-light bg-light">
-            <a class="navbar-brand" href="/">Resume Builder</a>
+        <nav className="navbar fixed-top  navbar-light bg-light">
+            <a className="navbar-brand" href="/">Resume Builder</a>
            
 
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/signup">SignUp</a>
+            <ul className="nav justify-content-end">
+                <li className="nav-item">
+                    <a className="nav-link active" href="/signup">SignUp</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/signin">SignIn</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/signin">SignIn</a>
                 </li>
                 {/* <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>

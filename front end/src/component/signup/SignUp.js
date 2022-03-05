@@ -50,7 +50,7 @@ const SignUp = () => {
                                     <Field as={TextField} label='Name' name='username' fullWidth placeholder='Enter your name' style={textStyle} helperText={<ErrorMessage name='username' />} required />
                                     <Field as={TextField} label='Email' name='email' fullWidth placeholder='Enter your email' style={textStyle} helperText={<ErrorMessage name='email' />} required />
                                     <Field as={TextField} label='Password' name='password' fullWidth placeholder='Enter your password' type='password' helperText={<ErrorMessage name='password' />} style={textStyle} required />
-                                    <Button type='submit' fullWidth variant='contained' color='primary' style={buttonStyle} >Sign Up</Button>
+                                    <Button type='submit' fullWidth variant='contained' color='primary' style={buttonStyle} >Submit</Button>
 
                                 </Form>
                             )}
