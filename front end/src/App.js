@@ -4,6 +4,9 @@ import { Landing, Template1, Template2, ResumeCreate, FourNotFour} from './pages
 import { DetailsContext } from './contexts/DetailsContext'
 import { PDFViewer } from '@react-pdf/renderer';
 import './App.css';
+import SignUp from './component/signup/SignUp';
+import Header from './component/layout/Header';
+import SignIn from './component/signin/SignIn';
 
 function App() {
 
@@ -13,7 +16,9 @@ function App() {
 
   return (
     <div className="app">
+      
       <Router>
+      <Header />
         <Switch>
           <Route path="/" exact>
             <Landing />
@@ -32,6 +37,12 @@ function App() {
 
           <Route path="/create" exact>
             <ResumeCreate />
+          </Route>
+          <Route path="/signup" exact>
+            <SignUp />
+          </Route>
+          <Route path="/signin" exact>
+            <SignIn />
           </Route>
 
 
