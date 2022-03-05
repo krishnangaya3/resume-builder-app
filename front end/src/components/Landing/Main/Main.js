@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core'
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import './Main.css';
 
@@ -9,10 +9,10 @@ import './Main.css';
 
 
 function Main() {
-  let history = useHistory();
+    const navigate = useNavigate();
 
   function handleClick() {
-    history.push("/create");
+    navigate("/create");
   }
   
     return (

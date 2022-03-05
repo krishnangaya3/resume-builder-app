@@ -7,3 +7,6 @@ export { default as ResumeCreate } from './ResumeCreate/ResumeCreate'
 
 
 export { default as FourNotFour } from './FourNotFour/FourNotFour'
+
+export { default as SignUp } from './signup/SignUp'
+export { default as SignIn } from './signin/SignIn'

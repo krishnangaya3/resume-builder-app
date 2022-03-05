@@ -1,0 +1,22 @@
+
+
+body{
+    background-image: url(../../assets/images/jpg/bg3.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+
+
+.MuiFormHelperText-root{
+    color: Red !important;
+    /* font-size: 1rem !important; */
+  }
+
+.signupHeading{
+  padding: 20px;
+  font-family: 'Barlow', sans-serif;
+}
+  

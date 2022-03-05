@@ -1,7 +1,7 @@
 import React, { useRef, useState, useContext, useEffect } from 'react'
 import { Button, Tooltip, Dialog, DialogContent, DialogContentText } from '@material-ui/core';
 import Zoom from '@material-ui/core/Zoom';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +15,7 @@ import { ChooseTemplate, UpdateHeader, UpdateEduExp, SkillInterest, UpdateContac
 
 
 import './ResumeCreate.css'
+import { Navbar } from '../../components'
 
 
 
@@ -23,7 +24,7 @@ function ResumeCreate() {
     const { resume } = useContext(DetailsContext);
     const template = resume.templateId
     const sliderRef = useRef();
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
     const [slide, setSlide] = useState(1)
@@ -81,7 +82,7 @@ function ResumeCreate() {
 
         setTimer(true)
         setTimeout(() => {
-			history.push(`/template/${template}`)
+            navigate(`/template/${template}`);
         }, 8000);
 
     }
@@ -107,13 +108,12 @@ function ResumeCreate() {
 
     return (
         <div className="resumeCreate">
+            <Navbar />
             <Helmet>
                 <title>Build Your Resume</title>
             </Helmet>
             <div className="resumeCreate_Container">
-                <div className="resumeCreate_header">
-                    <h1>Create Your Awesome Resume</h1>
-                </div>
+               
                 {/* stepper */}
                 <div className="HrtStepper">
                     <Tooltip TransitionComponent={Zoom} title="Choose Templates">

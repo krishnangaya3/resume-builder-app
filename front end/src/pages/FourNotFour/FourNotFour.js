@@ -2,14 +2,14 @@ import React from 'react'
  
 import './FourNotFour.css';
 import { Button } from '@material-ui/core';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import Helmet from 'react-helmet'
  
 function FourNotFour() {
-    let history = useHistory();
+    const navigate = useNavigate();
  
     function handleClick1() {
-        history.push("/");
+        navigate('/');
       }
     return (
         <div className="fnf">

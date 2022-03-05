@@ -1,0 +1,7 @@
+.MuiAppBar-root {
+    background:rgba(255, 255, 255, 0) !important;
+}
+
+#titleHome{
+    cursor: pointer;
+}

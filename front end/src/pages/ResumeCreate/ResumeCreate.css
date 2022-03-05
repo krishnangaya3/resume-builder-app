@@ -438,9 +438,7 @@
         background-color: #58B7EC;
         overflow: hidden;
     }
-    .resumeCreate_header h1{
-        text-shadow: 2px 2px 4px #000000de, -2px -2px 4px #ffffff59;
-    }
+   
     .HrtStepper{
         margin-top: 2% !important;
         width: 300px;
