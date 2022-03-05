@@ -82,7 +82,7 @@ export default function Navbar() {
       >
         <MenuItem onClick={handleClickSingnin}>Sign in</MenuItem>
         <MenuItem onClick={handleClickSignout}>Register</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClickHome}>Logout</MenuItem>
       </Menu>
         </Toolbar>
       </AppBar>
