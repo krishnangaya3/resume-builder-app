@@ -38,7 +38,7 @@ const SignIn = (props) => {
     console.log("resp::", respData);
     if (respData) {
       console.log("goin to navigate::");
-      navigate("/");
+      navigate("/create");
     } else {
       alert("Invalid Username or Password");
       setFormErrorValues("Invalid credentials!!");

@@ -14,16 +14,16 @@ app.use(express.json());
 app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
 
-app.post("/resumeinfo", function (req, res) {
+app.post("/contactinfo", function (req, res) {
   var resume = {
-    name: req.body.name,
-    education: req.body.education,
-    qualification: req.body.qualification,
-    skill: req.body.skill,
+    phone: req.body.phone,
+    email: req.body.email,
+    website: req.body.website,
+    address: req.body.address,
     experience: req.body.experience,
   };
   console.log(resume);
-  const resumeinfo = new resumeDetails(resume);
+  const resumeDetails = new ResumeInfo(resume);
   resumeDetails.save(function (err, result) {
     if (err) {
       console.log(err);
