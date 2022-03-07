@@ -11,3 +11,15 @@ export { default as Features } from './Landing/Features/Features'
 export { default as Demo } from './Landing/Demo/Demo'
 export { default as Navbar } from './Landing/Navbar/Navbar'
 
+
+export { default as Charts } from './admin/charts/Charts.jsx'
+export { default as Sidebar } from './admin/sidebar/Sidebar.jsx'
+export { default as WidgetLg } from './admin/widgetLg/WidgetLg.jsx'
+export { default as WidgetSm } from './admin/widgetSm/WidgetSm.jsx'
+export { default as Home } from './admin/home/Home.jsx'
+export { default as NewUser } from './admin/newUser/NewUser.jsx'
+export { default as User } from './admin/user/User.jsx'
+export { default as UserList } from './admin/userList/UserList.jsx'
+
+
+
