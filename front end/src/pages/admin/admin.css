@@ -6,11 +6,15 @@
     --back-color:rgb(36, 35, 35);
     --text-light:rgb(161, 155, 155);
  }
- 
- body{
+
+ .pageContainer{
     background-image: url(../../assets/images/jpg/bg4.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
+ }
+ 
+ body{
+    
      color: var(--text-color);
      font-family: 'Barlow', sans-serif;
  }

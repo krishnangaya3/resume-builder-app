@@ -7,14 +7,14 @@ import "./user.css";
 
 function Userpage() {
   return (
-       <>
+       <div className="pageContainer">
       <Navbar />
       <div className="container">
         <Sidebar />
         
           <User />
         </div>
-        </>
+        </div>
   )
 }
 

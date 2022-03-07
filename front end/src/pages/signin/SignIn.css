@@ -5,8 +5,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url(../../assets/images/jpg/bg3.jpg) ;}
+.app{
+    background-image: url(../../assets/images/jpg/bg3.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .background{
     width: 430px;

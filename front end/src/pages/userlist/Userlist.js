@@ -9,14 +9,14 @@ import "./userlist.css";
 
 function Userlistpage() {
   return (
-       <>
+       <div className="pageContainer">
       <Navbar />
       <div className="container">
         <Sidebar />
         
           <UserList />
         </div>
-        </>
+        </div>
   )
 }
 

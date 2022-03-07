@@ -9,14 +9,14 @@ import "./admin.css";
 
 function Admin() {
   return (
-       <>
+       <div className="pageContainer">
       <Navbar />
       <div className="container">
         <Sidebar />
         
           <Home />
         </div>
-        </>
+        </div>
   )
 }
 
