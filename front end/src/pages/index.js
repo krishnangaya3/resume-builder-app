@@ -10,7 +10,3 @@ export { default as FourNotFour } from './FourNotFour/FourNotFour'
 
 export { default as SignUp } from './signup/SignUp'
 export { default as SignIn } from './signin/SignIn'
-export { default as Admin } from './admin/Admin'
-export { default as Userpage } from './user/User'
-export { default as Userlistpage } from './userlist/Userlist'
-export { default as NewuserPage } from './newuser/Newuser'

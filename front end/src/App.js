@@ -8,10 +8,6 @@ import {
   FourNotFour,
   SignUp,
   SignIn,
-  Admin,
-  Userpage,
-  Userlistpage,
-  NewuserPage
 } from "./pages";
 import { DetailsContext } from "./contexts/DetailsContext";
 import { PDFViewer } from "@react-pdf/renderer";
@@ -46,10 +42,6 @@ function App() {
           <Route exact path="/create" element={<ResumeCreate />} />
           <Route exact path="/signup" element={<SignUp />} />
           <Route exact path="/signin" element={<SignIn />} />
-          <Route exact path="/admin" element={<Admin />} />
-          <Route exact path="/user/:userId" element={<Userpage />} />
-          <Route exact path="/users" element={<Userlistpage />} />
-          <Route exact path="/newUser" element={<NewuserPage />} />
           <Route component={FourNotFour} />
         </Routes>
       </Router>
