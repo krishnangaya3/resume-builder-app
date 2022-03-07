@@ -51,6 +51,9 @@ export default function Navbar() {
   function handleClickSignout() {
     navigate("/signup");
   }
+  function handleClickAdmin() {
+    navigate("/admin");
+  }
   
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -83,6 +86,7 @@ export default function Navbar() {
         <MenuItem onClick={handleClickSingnin}>Sign in</MenuItem>
         <MenuItem onClick={handleClickSignout}>Register</MenuItem>
         <MenuItem onClick={handleClickHome}>Logout</MenuItem>
+        <MenuItem onClick={handleClickAdmin}>Dashboard</MenuItem>
       </Menu>
         </Toolbar>
       </AppBar>
