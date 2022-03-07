@@ -9,14 +9,14 @@ import "./newuser.css";
 
 function NewuserPage() {
   return (
-       <>
+       <div className="pageContainer">
       <Navbar />
       <div className="container">
         <Sidebar />
         
           <NewUser />
         </div>
-        </>
+        </div>
   )
 }
 

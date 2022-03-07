@@ -8,9 +8,6 @@
  }
  
  body{
-    background-image: url(../../assets/images/jpg/bg4.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
      color: var(--text-color);
      font-family: 'Barlow', sans-serif;
  }

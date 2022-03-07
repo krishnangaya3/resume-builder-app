@@ -65,7 +65,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signupContainer">
       <Navbar />
       <Grid>
         <Paper elevation={20} style={paperStyle}>
