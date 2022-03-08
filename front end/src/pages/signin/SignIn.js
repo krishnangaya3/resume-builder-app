@@ -38,6 +38,8 @@ const SignIn = (props) => {
     console.log("resp::", respData);
     if (respData) {
       console.log("goin to navigate::");
+      localStorage.setItem('token',respData.token)
+
       navigate("/create");
     } else {
       alert("Invalid Username or Password");

@@ -1,7 +1,8 @@
 const express = require("express");
+const jwt=require('jsonwebtoken')
 const loginRouter = express.Router();
 const UserInfo = require("../models/UsersDB");
-
+const JWT_SECRET="This is your secret key"
 loginRouter.get("/", function (req, res) {
   res.render("login", {});
 });
@@ -17,7 +18,10 @@ loginRouter.post("/verifyuser", function (req, res) {
     { username: username, password: password },
     function (err, user) {
       console.log(user);
-      res.json(user);
+      const token = jwt.sign({ id:user._id }, JWT_SECRET, {
+        expiresIn: 3600
+      })
+      res.json({user:user,token:token});
     }
   );
 });
