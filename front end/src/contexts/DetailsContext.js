@@ -6,7 +6,7 @@ function DetailsContextProvider(props) {
 
     const [resume, setResume] = useState(
         JSON.parse(localStorage.getItem("resumeLocal")) || {
-        templateId: '1', 
+        templateId: '', 
         image: '',
         header: {},
         education: {},

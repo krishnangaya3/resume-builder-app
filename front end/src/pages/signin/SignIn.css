@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-.app{
+.signinContainer{
     background-image: url(../../assets/images/jpg/bg3.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;

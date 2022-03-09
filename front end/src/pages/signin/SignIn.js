@@ -51,7 +51,7 @@ const SignIn = (props) => {
     navigate("/signup", { replace: true });
   };
   return (
-   
+   <>
     <div className="signinContainer">
       <Navbar />
       <div className="background">
@@ -87,6 +87,7 @@ const SignIn = (props) => {
         <button onClick={clicked}>Sign Up Here!!!!</button>
       </form>
     </div>
+    </>
   );
 };
 

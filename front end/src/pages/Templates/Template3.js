@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
 
-
+import setAvatar from  '../../utils/setAvatar'
 import openSans from '../../assets/fonts/OpenSans-Light.ttf'
 import Alegreya from '../../assets/fonts/AlegreyaSansSC-Bold.ttf'
 import ubuntu from '../../assets/fonts/UbuntuMono-Italic.ttf'
@@ -16,142 +16,140 @@ Font.register({ family: "'Nunito', sans-serif", src: nunito });
 Font.register({ family: "'Courgette', cursive", src: Courgette });
 
 
-function Template2({ resume }) {
+function Template3({ resume }) {
 
     console.log(resume)
     
     const styles = StyleSheet.create({
         page: {
-          flexDirection: 'column',
-          backgroundColor: resume.theme.primary,
-        },
-        header: {
-          padding: '20px',
-          display: 'flex',
-          flexDirection: 'row-reverse',
-          justifyContent: 'space-evenly',
-          backgroundColor: 'red',
-        },
-        avatar : {
-            width: '90px',
-            height: '90px',
-            borderRadius: '100%',
-            marginRight: 15,
-            marginLeft: 15
-        },
-        headerRight: {
             flexDirection: 'column',
-            justifyContent: 'space-evenly',
-            overflow: 'hidden',
-        },
-        name: {
-            fontSize: 35,
-            fontFamily: "'Courgette', cursive",
-        },
-        title: {
-            fontSize: 16,
-            textTransform: 'uppercase',
-            marginTop: '-10px',
-            fontFamily: "'Nunito', sans-serif"
-        },
-        bio: {
-            margin: 20,
-            marginBottom: 0,
-            marginTop: 15
-        },
-        bioText: {
-            margin: 20,
-            fontSize: 14,
-            fontFamily: "'Open Sans', sans-serif",
-            fontWeight: '900'
-        },
-        bodyContainer: {
+            backgroundColor: resume.theme.primary,
+          },
+          header: {
+            padding: '20px',
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center'
-        },
-        bodyLeft: {
-            display: 'flex',
-        },
-        bodyRight: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'space-evenly',
-            paddingLeft: 50
-        },
-        educationContainer: {
-            marginLeft: 40,
-            marginRight: 0,
-            marginBottom: 15,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-        },
-        eduHeading: {
-            marginBottom: 5,
-            marginTop: 15,
-            fontSize: 15,
-            textTransform: 'uppercase',
-            marginLeft: '-390px',
-            fontFamily: "'Alegreya Sans SC', sans-serif"
-        },
-        education: {
-            marginTop: 10,
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start'
-        },
-        eduYear: {
-            marginRight: 0,
-            fontSize: 10,
-            fontFamily: "font-family: 'Ubuntu Mono', monospace"
-        },
-        eduRight: {
-            marginLeft: 20,
-        },
-        eduRightTitle: {
-            fontSize: '13px',
-            fontFamily: "'Nunito', sans-serif"
-        }, 
-        eduRightCont: {
-            fontSize: '10px',
-            fontFamily: "'Nunito', sans-serif"
-        },
-        skillInterest: {
-            marginLeft: 30,
-            marginRight: 30,
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'flex-start',
-            justifyContent: 'space-evenly'
-        },
-        skillInterestHeading: {
-            marginBottom: 10,
-            marginTop: 15,
-            fontSize: 15,
-            textTransform: 'uppercase',
-            fontFamily: "'Alegreya Sans SC', sans-serif"
-        },
-        skill: {
-            fontSize: '10px',
-            marginBottom: '5px',
-            fontFamily: "'Nunito', sans-serif"
-        },
-        contacts: {
-            display: 'flex',
-            flexDirection: 'row',
-            margin: 10,
-        },
-        contactItem: {
-            fontSize: '10px',
-            marginBottom: '4px',
-            fontFamily: "'Nunito', sans-serif",
-            marginLeft: '20px',
-        }
+            backgroundColor: resume.theme.secondary,
+          },
+          avatar : {
+              width: '80px',
+              height: '80px',
+              borderRadius: '100%',
+              marginRight: 25
+          },
+          headerRight: {
+              flexDirection: 'column',
+              justifyContent: 'space-evenly',
+              
+          },
+          name: {
+              fontSize: 15,
+              fontFamily: "'Courgette', cursive",
+          },
+          title: {
+              fontSize: 16,
+              textTransform: 'uppercase',
+              marginTop: '-10px',
+              fontFamily: "'Nunito', sans-serif"
+          },
+          bio: {
+              margin: 20,
+              marginBottom: 0,
+              marginTop: 15
+          },
+          bioText: {
+              margin: 20,
+              fontSize: 14,
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: '900'
+          },
+          educationContainer: {
+              marginLeft: 70,
+              marginRight: 40,
+              marginBottom: 15,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign:'center'
+            
+          },
+          eduHeading: {
+              marginBottom: 5,
+              marginTop: 15,
+              fontSize: 15,
+              textTransform: 'uppercase',
+              fontFamily: "'Alegreya Sans SC', sans-serif",
+              marginRight: '42%'
+
+          },
+          education: {
+              marginTop: 10,
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start'
+          },
+          eduYear: {
+              marginRight: 40,
+              fontSize: 10,
+              fontFamily: "font-family: 'Ubuntu Mono', monospace"
+          },
+          eduRight: {
+              marginLeft: 20,
+          },
+          eduRightTitle: {
+              fontSize: '13px',
+              fontFamily: "'Nunito', sans-serif"
+          }, 
+          eduRightCont: {
+              fontSize: '10px',
+              fontFamily: "'Nunito', sans-serif"
+          },
+          skillInterest: {
+              marginLeft: 30,
+              marginRight: 30,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'space-evenly'
+          },
+          skillInterestHeading: {
+              marginBottom: 10,
+              marginTop: 15,
+              fontSize: 15,
+              textTransform: 'uppercase',
+              fontFamily: "'Alegreya Sans SC', sans-serif"
+          },
+          skill: {
+              fontSize: '10px',
+              marginBottom: '5px',
+              fontFamily: "'Nunito', sans-serif"
+          },
+          contact: {
+              padding: 40,
+              paddingBottom: 3,
+              paddingTop: 25,
+              marginLeft: 50,
+              display: 'flex',
+              flexDirection: 'row',
+          },
+          details: {
+              display: 'flex',
+              flexDirection: 'column',
+              margin: 10,
+          },
+          address: {
+              margin: 10,
+              marginLeft: 100,
+              paddingRight: 20,
+              width: '70%'
+          },
+          contactItem: {
+              fontSize: '10px',
+              marginBottom: '4px',
+              fontFamily: "'Nunito', sans-serif"
+          }
     });
 
 
@@ -162,12 +160,44 @@ function Template2({ resume }) {
                     {resume.image ? (
                         <Image src={resume.image} style={styles.avatar}/>
                     ) : (
-                        <Image src={avatar} style={styles.avatar}/>
+                        <Image src={setAvatar} style={styles.avatar}/>
                     )}
                     <View style={styles.headerRight}>
                         <Text style={styles.name}>{resume.header.name}</Text>
                         <Text style={styles.title}>{resume.header.title}</Text>
                     </View>
+                    <View style={styles.contact}>
+                    <View style={styles.details}>
+                        {resume.contact.phone ? (
+                            <Text style={styles.contactItem}>{resume.contact.phone}</Text>
+                        ) : (
+                            <></>
+                        )}
+
+                        {resume.contact.email ? (
+                            <Text style={styles.contactItem}>{resume.contact.email}</Text>
+                        ) : (
+                            <></>
+                        )}
+
+
+
+                        {resume.contact.website ? (
+                        <Text style={styles.contactItem}>{resume.contact.website}</Text>
+                        ) : (
+                            <></>
+                        )}
+
+
+                    </View>
+                    <View style={styles.address}>                        
+                        {resume.contact.address ? (
+                        <Text style={styles.contactItem}>{resume.contact.address}</Text>
+                        ) : (
+                            <></>
+                        )}
+                    </View>
+                </View>
                 </View>
             
                 <View style={styles.bio}>
@@ -304,41 +334,9 @@ function Template2({ resume }) {
                     </View>
                 </View>
 
-                <View style={styles.contact}>
-                    <View style={styles.details}>
-                        {resume.contact.phone ? (
-                            <Text style={styles.contactItem}>{resume.contact.phone}</Text>
-                        ) : (
-                            <></>
-                        )}
-
-                        {resume.contact.email ? (
-                            <Text style={styles.contactItem}>{resume.contact.email}</Text>
-                        ) : (
-                            <></>
-                        )}
-
-
-
-                        {resume.contact.website ? (
-                        <Text style={styles.contactItem}>{resume.contact.website}</Text>
-                        ) : (
-                            <></>
-                        )}
-
-
-                    </View>
-                    <View style={styles.address}>                        
-                        {resume.contact.address ? (
-                        <Text style={styles.contactItem}>{resume.contact.address}</Text>
-                        ) : (
-                            <></>
-                        )}
-                    </View>
-                </View>
             </Page>
         </Document>
     )
 }
 
-export default Template2
+export default Template3
