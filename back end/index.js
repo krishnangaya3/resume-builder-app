@@ -2,9 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const TemplateInfo = require("./src/models/TemplateDB");
 const UserInfo = require("./src/models/UsersDB");
-const ResumeInfo = require("./src/models/ResumeDB");
+// const ResumeInfo = require("./src/models/ResumeDB");
 const loginRouter = require("./src/routes/LoginRoute");
 const signupRouter = require("./src/routes/SignupRoute");
+const emailvalidator = require("email-validator");
 
 const app = express();
 app.use(cors());
@@ -19,6 +20,18 @@ app.get("/userslist", function (req, res) {
     console.log("users::", users);
     res.json(users);
   });
+});
+
+app.post("/deleteuser", function (req, res) {
+  const email = req.body.email;
+
+  if (emailvalidator.validate(req.body.email)) {
+    UserInfo.findOneAndDelete({ name: email }).then(function (users) {
+      res.json(users);
+    });
+  } else {
+    res.status(400).send("Invalid Email");
+  }
 });
 
 // app.post("/contactinfo", function (req, res) {
