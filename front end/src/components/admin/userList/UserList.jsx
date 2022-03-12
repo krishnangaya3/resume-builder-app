@@ -24,53 +24,53 @@ export default function UserList() {
     )
   };
   
-  const columns = [
-    // { field: "id", headerName: "ID", width: 150  },
-    {
-      field: "username",
-      headerName: "Username",
-      width: 350,
-      renderCell: (params) => {
-        return (
-          <div className="userListUser">
-            {/* <img className="userListImg" src={params.row.avatar} alt="" /> */}
-            {params.row.username}
-          </div>
-        );
-      },
-    },
-    { field: "email", headerName: "Email", width: 350 },
-    // {
-    //   field: "status",
-    //   headerName: "Status",
-    //   width: 160,
-    // },
-    // {
-    //   field: "transaction",
-    //   headerName: "Transaction Volume",
-    //   width: 180,
-    // },
-    {
-      field: "action",
-      headerName: "Action",
-      width: 160,
-      renderCell: (params) => {
-        return (
-          <>
+  // const columns = [
+  //   // { field: "id", headerName: "ID", width: 150  },
+  //   {
+  //     field: "username",
+  //     headerName: "Username",
+  //     width: 350,
+  //     renderCell: (params) => {
+  //       return (
+  //         <div className="userListUser">
+  //           <img className="userListImg" src={params.row.avatar} alt="" />
+  //           {params.row.username}
+  //         </div>
+  //       );
+  //     },
+  //   },
+  //   { field: "email", headerName: "Email", width: 350 },
+  //   {
+  //     field: "status",
+  //     headerName: "Status",
+  //     width: 160,
+  //   },
+  //   {
+  //     field: "transaction",
+  //     headerName: "Transaction Volume",
+  //     width: 180,
+  //   },
+  //   {
+  //     field: "action",
+  //     headerName: "Action",
+  //     width: 160,
+  //     renderCell: (params) => {
+  //       return (
+  //         <>
          
-         {/* <Link to={"/user/" + params.row.email}>
-              <button className="userListEdit">Edit</button>
-            </Link> */}
+  //        <Link to={"/user/" + params.row.email}>
+  //             <button className="userListEdit">Edit</button>
+  //           </Link>
             
-            <DeleteOutline
-              className="userListDelete"
-              onClick={() => handleDelete(params.row.email)}
-            />
-          </>
-        );
-      },
-    },
-  ];
+  //           <DeleteOutline
+  //             className="userListDelete"
+  //             onClick={() => handleDelete(params.row.email)}
+  //           />
+  //         </>
+  //       );
+  //     },
+  //   },
+  // ];
 
   async function dataLoading  (){
     
