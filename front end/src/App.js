@@ -5,6 +5,7 @@ import {
   Template1,
   Template2,
   Template3,
+  Template4,
   ResumeCreate,
   FourNotFour,
   SignUp,
@@ -50,6 +51,15 @@ function App() {
             element={
               <PDFViewer>
                 <Template3 resume={resume} />
+              </PDFViewer>
+            }
+          />
+           <Route
+            exact
+            path="/template/4"
+            element={
+              <PDFViewer>
+                <Template4 resume={resume} />
               </PDFViewer>
             }
           />
