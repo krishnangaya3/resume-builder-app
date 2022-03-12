@@ -6,6 +6,7 @@ import './ChooseTemplate.css'
 import template1 from '../../../assets/images/templates/template1.png'
 import template2 from '../../../assets/images/templates/template2.png'
 import template3 from '../../../assets/images/templates/template3.png'
+import template4 from '../../../assets/images/templates/template4.png'
 
 
 const templates = [
@@ -23,6 +24,11 @@ const templates = [
         id: 3,
         img: template3,
         name: 'Terra'
+    },
+    {
+        id: 4,
+        img: template4,
+        name: 'Orion'
     },
 ]
 
