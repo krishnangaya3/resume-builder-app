@@ -5,7 +5,11 @@
     -webkit-box-shadow: var(--webkit-shadow);
     box-shadow: var(--box-shadow);
     background-color: var(--backCard-color);
+    
   
+  }
+  .head{
+    color: white !important;
   }
   
   .userListUser {

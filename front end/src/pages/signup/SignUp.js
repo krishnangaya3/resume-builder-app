@@ -67,8 +67,8 @@ const SignUp = () => {
   return (
     <div className="signupContainer">
       <Navbar />
-      <Grid>
-        <Paper elevation={20} style={paperStyle}>
+      <Grid >
+        <Paper elevation={20} style={paperStyle} className="Paper-root">
           <Grid align="center">
             <Avatar style={avatarStyle}></Avatar>
             <h1 className="signupHeading" style={headerStyle}>

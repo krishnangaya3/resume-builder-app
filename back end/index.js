@@ -17,21 +17,28 @@ app.use("/signup", signupRouter);
 
 app.get("/userslist", function (req, res) {
   UserInfo.find().then(function (users) {
-    console.log("users::", users);
+    // console.log("users::", users);
     res.json(users);
   });
 });
 
-app.post("/deleteuser", function (req, res) {
-  const email = req.body.email;
+app.post("/deleteuser/:id", function (req, res) {
+  // const email = req.body.email;
+  const id = req.params.id;
+  const filter ={_id:Object(id)};
+  UserInfo.findOneAndDelete(filter).then(function(users){
+    res.json(users);
+  })
 
-  if (emailvalidator.validate(req.body.email)) {
-    UserInfo.findOneAndDelete({ name: email }).then(function (users) {
-      res.json(users);
-    });
-  } else {
-    res.status(400).send("Invalid Email");
-  }
+  // if (emailvalidator.validate(req.body.email)) {
+  //   UserInfo.findOneAndDelete({ name: email }).then(function (users) {
+  //     res.json(users);
+  //   });
+  // } else {
+  //   res.status(400).send("Invalid Email");
+
+  // }
+
 });
 
 // app.post("/contactinfo", function (req, res) {

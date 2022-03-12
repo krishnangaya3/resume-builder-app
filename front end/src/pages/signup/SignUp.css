@@ -8,6 +8,10 @@
 
 }
 
+.MuiPaper-root{
+  background:rgba(140, 114, 114, 1) ;
+}
+
 
 
 .MuiFormHelperText-root{
