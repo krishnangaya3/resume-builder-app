@@ -1,11 +1,9 @@
 import "./userList.css";
-import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 // import { userRows } from "../../../dummyData";
-import { Link ,BrowserRouter} from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from 'axios';
-import { Button, CircularProgress, Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import {  Table, TableBody, TableCell, TableHead, TableRow} from '@mui/material';
 
 export default function UserList() {
   // const [data, setData] = useState(userRows);

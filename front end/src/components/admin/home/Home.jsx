@@ -1,4 +1,4 @@
-import {Charts,WidgetSm,WidgetLg} from "../../../components"
+import {Charts} from "../../../components"
 
 import "./home.css"
 import { userData } from "../../../dummyData"
@@ -10,8 +10,7 @@ const Home = () => {
             
             <Charts data={userData} title="User Analytics" grid dataKey="Active User"/>
             <div className="homeWidgets">
-          <WidgetSm/>
-          <WidgetLg/>
+         
       </div>
         </div>
     )
