@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://gaya3:gaya397@cluster0.bjgsw.mongodb.net/ResumeBuilderDatabase?retryWrites=true&w=majority"
+  "mongodb+srv://ashique:zxcvbnml@database.nvbnr.mongodb.net/database?retryWrites=true&w=majority"
 );
 
 const Schema = mongoose.Schema;
